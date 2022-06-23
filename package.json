@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "compile": "graph-compiler --config $CONFIG --include node_modules/@openzeppelin/subgraphs/src/datasources --export-schema --export-subgraph",
+    "build": "graph codegen $SUBGRAPH && graph build $SUBGRAPH",
+    "build:sample": "CONFIG=sample.json npm run compile && SUBGRAPH=build/sample.subgraph.yaml npm run build && rm ./build/subgraph.yaml && mv ./build/sample.subgraph.yaml ./build/subgraph.yaml",
+    "deploy": "cd build && graph deploy --node https://api.thegraph.com/deploy/ apm1001/matic --access-token $TOKEN"
+  },
+  "dependencies": {
+    "@openzeppelin/subgraphs": "^0.1.0"
+  }
+}

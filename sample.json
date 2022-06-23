@@ -1,0 +1,8 @@
+{
+  "output": "build/sample.",
+  "chain": "matic",
+  "datasources": [
+    { "address": "0x4ea4c3159693e6f5174f1d9da21ea30876f9981c", "startBlock": 26591713, "module": [ "erc20" ] },
+    { "address": "0x495f7c62e2e419ab16978ec0895d6aeeed2148e5", "startBlock": 27593834, "module": [ "erc20" ] }
+  ]
+}
